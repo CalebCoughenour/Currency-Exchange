@@ -3,6 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import CurrencyExchange from './js/currency-api.js';
+import CurrencyConversions from './js/conversions-api.js';
 
 const clearDisplay = () => {
   $('#base-currency').text("");
@@ -37,6 +38,24 @@ $('#exchange-form').submit(function(e) {
       if (error.includes("unsupported-code")) {
         $('#error-display').text(`Unsupported Currency. Please try again.`);
       } else if (error.includes("quota-reached")) {
+        $('#error-display').text(`We're sorry! Total monthly API limit reached!`);
+      }
+    }
+  );
+});
+
+$(document).ready(function() {
+  let promise = CurrencyConversions.getConversions();
+  promise.then(function(response) {
+    let body = JSON.parse(response);
+    console.log(body);
+    $('#euro-display').text(`EUR: ${body.conversion_rates.EUR}`);
+    $('#yen-display').text(`JPY: ${body.conversion_rate.JPY}`);
+    $('#pound-display').text(`GBP: ${body.conversion_rate.GBP}`);
+    $('#aussi-display').text(`AUD: ${body.conversion_rate.AUD}`);
+    $('#canada-display').text(`CAD: ${body.conversion_rate.CAD}`);
+    }, function(error) {
+      if (error.includes("quota-reached")) {
         $('#error-display').text(`We're sorry! Total monthly API limit reached!`);
       }
     }
