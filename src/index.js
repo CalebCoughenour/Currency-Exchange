@@ -50,10 +50,10 @@ $(document).ready(function() {
     let body = JSON.parse(response);
     console.log(body);
     $('#euro-display').text(`EUR: ${body.conversion_rates.EUR}`);
-    $('#yen-display').text(`JPY: ${body.conversion_rate.JPY}`);
-    $('#pound-display').text(`GBP: ${body.conversion_rate.GBP}`);
-    $('#aussi-display').text(`AUD: ${body.conversion_rate.AUD}`);
-    $('#canada-display').text(`CAD: ${body.conversion_rate.CAD}`);
+    $('#yen-display').text(`JPY: ${body.conversion_rates.JPY}`);
+    $('#pound-display').text(`GBP: ${body.conversion_rates.GBP}`);
+    $('#aussi-display').text(`AUD: ${body.conversion_rates.AUD}`);
+    $('#canada-display').text(`CAD: ${body.conversion_rates.CAD}`);
     }, function(error) {
       if (error.includes("quota-reached")) {
         $('#error-display').text(`We're sorry! Total monthly API limit reached!`);
