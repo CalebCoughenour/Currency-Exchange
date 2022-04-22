@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import CurrencyExchange from './js/currency-api.js';
 import CurrencyConversions from './js/conversions-api.js';
+import CryptoSearch from './js/crypto-search-api.js';
 
 const clearDisplay = () => {
   $('#base-currency').text("");
@@ -45,6 +46,23 @@ $('#exchange-form').submit(function(e) {
       }
     }
   );
+});
+
+$('#coin-search-button').click(function(e) {
+  e.preventDefault();
+  let ticker = $('#coin-search').val().toUpperCase();
+  let promise = CryptoSearch.getCoins(ticker);
+  promise.then(function(response) {
+  const body = JSON.parse(response);
+  $('.card-results').show();
+  $('#coin-name').text(`${body[0].name}`);
+  $('#coin-price').text(`Current Price: $ ${parseFloat(body[0].price).toFixed(2)}`);
+  $('#price-change').text(`1d Price Change: $ ${parseFloat(body[0]["1d"].price_change).toFixed(2)}`);
+  $('#volume').text(`1d Volume: $ ${body[0]["1d"].volume}`);
+  $('#market-cap').text(`Market Cap: $ ${body[0].market_cap}`);
+  $('.card-error').hide();
+  $('.card-homer').hide(); 
+  });
 });
 
 $(document).ready(function() {
