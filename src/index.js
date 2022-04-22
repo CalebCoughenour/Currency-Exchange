@@ -37,8 +37,10 @@ $('#exchange-form').submit(function(e) {
       clearInput();
       clearDisplay();
       if (error.includes("unsupported-code")) {
-        $('#error-display').text(`Unsupported Currency. Please try again.`);
+        $('.card-user-conversions').show();
+        $('#error-display').text(`Unsupported Currency. Please try again with a valid currency code.`);
       } else if (error.includes("quota-reached")) {
+        $('.card-user-conversions').show();
         $('#error-display').text(`We're sorry! Total monthly API limit reached!`);
       }
     }
@@ -50,7 +52,7 @@ $(document).ready(function() {
   promise.then(function(response) {
     let body = JSON.parse(response);
     console.log(body);
-    $('#conversions-display').text(`USD Conversion Rates: EUR: ${body.conversion_rates.EUR} JPY: ${body.conversion_rates.JPY} GBP: ${body.conversion_rates.GBP} AUD: ${body.conversion_rates.AUD} CAD: ${body.conversion_rates.CAD}`);
+    $('#conversions-display').text(`USD Conversion Rates - EUR: ${body.conversion_rates.EUR} JPY: ${body.conversion_rates.JPY} GBP: ${body.conversion_rates.GBP} AUD: ${body.conversion_rates.AUD} CAD: ${body.conversion_rates.CAD}`);
     }, function(error) {
       if (error.includes("quota-reached")) {
         $('#error-display').text(`We're sorry! Total monthly API limit reached!`);

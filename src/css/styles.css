@@ -3,6 +3,7 @@ body {
 }
 
 h1 {
+  margin-top: 10px;
   text-align: center;
   font-family: fantasy;
 }
@@ -17,6 +18,7 @@ input {
   margin-right: auto;
   display: block;
 }
+
 
 .btn-success {
   margin-left: auto;
@@ -39,6 +41,7 @@ input {
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
+  padding-right: 10px;
   width: 74%;
   position: relative;
   display: flex;
@@ -58,6 +61,7 @@ input {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
+  padding-right: 20px;
   width: 20%;
   position: relative;
   display: none;
