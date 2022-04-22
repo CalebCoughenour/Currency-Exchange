@@ -17,13 +17,12 @@
 
 ## Description
 
-This website will ask the user for three inputs. The inputs are amount they want to convert, base currency and the currency they would like to convert to. Next, the site will query the ExchangeRate-API with the information provided by the user. The base currency, converted currency, conversion rate and converted amount will be displayed on the page after the call is complete. 
+This website will ask the user for three inputs. The inputs are amount they want to convert, base currency and the currency they would like to convert to. Next, the site will query the ExchangeRate-API with the information provided by the user. The base currency, converted currency, conversion rate and converted amount will be displayed on the page after the call is complete. There is also commented out code for a crypto search. Instructions on how to set up are in this README below the set-up instructions. 
 
 ## Necessary Tools
 
 * node.js
 * Create an account and get an API key from [ExchangeRate-API](https://www.exchangerate-api.com/)
-* Create an account and get API key from [Nomics](https://p.nomics.com/pricing) (this part is optional, crypto search is commented out)
 
 ## Setup/Installation Requirements
 
@@ -39,10 +38,11 @@ This website will ask the user for three inputs. The inputs are amount they want
 * In the root directory run "npm install"
 * Once the installs have successfully completed, run "npm run start" to open and run website
 
-## Crypto Search Bar
+## Crypto Search Bar - optional
 
-* If you want to use the crypto search you will need to remove all commented out code in index.src, index.html & crypto-search-api.js
-* Next, add your API key to the .env file by typing "CRYPTO_API_KEY={your key here}"
+* Create an account and get API key from [Nomics](https://p.nomics.com/pricing)
+* Un-comment code in index.src, index.html & crypto-search-api.js
+* Add your API key to the .env file by typing "CRYPTO_API_KEY={your key here}"
 
 ## Known Bugs
 
