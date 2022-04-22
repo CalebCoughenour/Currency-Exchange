@@ -31,6 +31,7 @@ $('#exchange-form').submit(function(e) {
     $('#converted-currency').text(`Converted To: ${secondaryCurrency.toUpperCase()}`);
     $('#conversion-rate').text(`Conversion Rate: ${body.conversion_rate}`);
     $('#converted-amount').text(`Converted Amount: ${body.conversion_result}`);
+    $('.card-user-conversions').show();
     $('#error-display').text("");
   }, function(error) {
       clearInput();
@@ -49,11 +50,7 @@ $(document).ready(function() {
   promise.then(function(response) {
     let body = JSON.parse(response);
     console.log(body);
-    $('#euro-display').text(`EUR: ${body.conversion_rates.EUR}`);
-    $('#yen-display').text(`JPY: ${body.conversion_rates.JPY}`);
-    $('#pound-display').text(`GBP: ${body.conversion_rates.GBP}`);
-    $('#aussi-display').text(`AUD: ${body.conversion_rates.AUD}`);
-    $('#canada-display').text(`CAD: ${body.conversion_rates.CAD}`);
+    $('#conversions-display').text(`USD Conversion Rates: EUR: ${body.conversion_rates.EUR} JPY: ${body.conversion_rates.JPY} GBP: ${body.conversion_rates.GBP} AUD: ${body.conversion_rates.AUD} CAD: ${body.conversion_rates.CAD}`);
     }, function(error) {
       if (error.includes("quota-reached")) {
         $('#error-display').text(`We're sorry! Total monthly API limit reached!`);

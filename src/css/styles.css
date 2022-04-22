@@ -7,7 +7,7 @@ h1 {
   font-family: fantasy;
 }
 
-h4 {
+h5 {
   text-align: center;
 }
 
@@ -31,4 +31,49 @@ input {
   margin-right: auto;
   padding-top: 10px;
   width: 20%;
+  border: 1px solid black;
+}
+
+.card-conversions {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  width: 74%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0);
+  border-radius: 0.25rem;
+}
+
+.card-user-conversions {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  width: 20%;
+  position: relative;
+  display: none;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0);
+  border-radius: 0.25rem;
+}
+
+#conversions-display {
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  display: block;
 }
