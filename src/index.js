@@ -27,7 +27,7 @@ $('#exchange-form').submit(function(e) {
     const body = JSON.parse(response);
     clearInput();
     $('#base-currency').text(`Base Currency: ${body.base_code}`);
-    $('#converted-currency').text(`Converted To: ${secondaryCurrency}`);
+    $('#converted-currency').text(`Converted To: ${secondaryCurrency.toUpperCase()}`);
     $('#conversion-rate').text(`Conversion Rate: ${body.conversion_rate}`);
     $('#converted-amount').text(`Converted Amount: ${body.conversion_result}`);
     $('#error-display').text("");

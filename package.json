@@ -1,7 +1,7 @@
 {
-  "name": "template",
+  "name": "currency-exchange",
   "version": "1.0.0",
-  "description": "",
+  "description": "app that displays currency conversions",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",

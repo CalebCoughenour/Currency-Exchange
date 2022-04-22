@@ -1,8 +1,8 @@
-# _{Application Name}_
+# _Currency Exchange_
 
 #### By _**Caleb Coughenour**_
 
-#### _{Brief description of application}_
+#### This website will convert currencies using an API
 
 ## Technologies Used
 
@@ -12,28 +12,38 @@
 * _CSS_
 * _Node.js_
 * _npm_
-* _webpack_
+* _Webpack_
+* _API_
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+This website will ask the user for three inputs. The inputs are amount they want to convert, base currency and the currency they would like to convert to. Next, the site will query the ExchangeRate-API with the information provided by the user. The base currency, converted currency, conversion rate and converted amount will be displayed on the page after the call is complete. 
+
+## Necessary Tools
+
+* node.js
+* Create an account and get an API key from [ExchangeRate-API](https://www.exchangerate-api.com/)
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* Copy the git repository url from the "code" drop down on this github page
+* Open a shell program & navigate to your desktop
+* Clone the repository using the copied URL and the "git clone" command
+* In the shell program, navigate to the root directory of the newly created file called "Currency-Exchage"
+* In the root directory, create a file named ".env"
+* Navigate to the newly created .env file. This is where you will add your API key by typing "API_KEY={your key here}"
+* In the root directory, add a file named ".gitignore" if you do not already have one_
+* Add .env to your .gitignore file
+* Commit just your .gitignore file to your github
+* In the root directory run "npm install"
+* Once the installs have successfully completed, run "npm run start" to open and run website
 
 ## Known Bugs
 
-* _Any known issues_
+* _No known issues_
 
 ## License
 
 _MIT Licensed_
 
-Copyright (c) _date_ _Caleb Coughenour_
+Copyright (c) _4/22/22_ _Caleb Coughenour_
