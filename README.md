@@ -32,7 +32,7 @@ This website will ask the user for three inputs. The inputs are amount they want
 * In the shell program, navigate to the root directory of the newly created file called "Currency-Exchage"
 * In the root directory, create a file named ".env"
 * Navigate to the newly created .env file. This is where you will add your API key by typing "API_KEY={your key here}"
-* In the root directory, add a file named ".gitignore" if you do not already have one_
+* In the root directory, add a file named ".gitignore" if you do not already have one
 * Add .env to your .gitignore file
 * Commit just your .gitignore file to your github
 * In the root directory run "npm install"
@@ -50,6 +50,6 @@ This website will ask the user for three inputs. The inputs are amount they want
 
 ## License
 
-_MIT Licensed_
+_[MIT Licensed](license)_
 
 Copyright (c) _4/22/22_ _Caleb Coughenour_
