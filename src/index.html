@@ -6,10 +6,17 @@
   <div class="container">
     <form id="exchange-form">
       <input id="currency-amount" type="text" placeholder="Amount" required>
-      <input id="main-currency" type="text" placeholder="Enter Currency" required>
-      <input id="secondary-currency" type="text" placeholder="Enter Currency" required>
+      <input id="main-currency" type="text" placeholder="Base Currency" required>
+      <input id="secondary-currency" type="text" placeholder="Exchange To" required>
       <button id="currency-button" class="btn-success">Enter</button>
     </form>
+
+    <div id="display-area">
+      <div id="base-currency"></div>
+      <div id="conversion-rate"></div>
+      <div id="converted-amount"></div>
+      <div id="error-display"></div>
+    </div>
 
     
   </div>
