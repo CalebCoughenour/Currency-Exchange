@@ -1,8 +1,8 @@
 export default class CurrencyExchange {
-  static getRate() {
+  static getRate(currency, secondaryCurrency, amount) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/EUR/GBP`;
+      const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${currency}/${secondaryCurrency}/${amount}`;
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);

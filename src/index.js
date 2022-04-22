@@ -7,10 +7,11 @@ import CurrencyExchange from './js/currency-api.js';
 $('#exchange-form').submit(function(e) {
   e.preventDefault();
   let mainCurrency = $('#main-currency').val();
-  let  secondaryCurrency = $('#secondary-currency').val();
-  let promise = CurrencyExchange.getRate(mainCurrency, secondaryCurrency);
+  let secondaryCurrency = $('#secondary-currency').val();
+  let amount = $('#currency-amount').val();
+  let promise = CurrencyExchange.getRate(mainCurrency, secondaryCurrency, amount);
   promise.then(function(response) {
-    const body = JSON.parse(response)
+    const body = JSON.parse(response);
     console.log(body);
   });
 });
